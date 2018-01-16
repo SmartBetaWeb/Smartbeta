@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="UTF-8">  
+    {% block title %}首页{% endblock %}  
+</head>  
+<body>  
+  
+    {% if name %}  
+        <h1>Hello,{{ name }}!</h1>  
+    {% else %}  
+        <h1>Hello,Stranger！</h1>  
+    {% endif %}  
+      
+    <form method="post">  
+        {{ form.hidden_tag() }}  <!-- 隐藏表单字段，是为了防止CSRF，所有开启防止CSRF的功能后表单都要加上这句话 -->  
+        {{ form.name.label }}  <!-- 这是取定义的表单类中的name字段的第一个参数的标签，相当于input前面的文字 -->  
+        {{ form.name() }}  <!-- 显示定义的表单的name字段的内容，相当于一个<input type='text'> -->  
+        {{ form.submit() }}  <!-- 显示定义的表单类中的submit字段内容，相当于一个<input type='submit'> -->  
+    </form>  
+  
+</body>  
+</html>  
