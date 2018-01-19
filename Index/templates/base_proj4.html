@@ -1,43 +1,42 @@
 {% extends "bootstrap/base.html" %}
-{% block title %}tgy{% endblock %}
+{% block title %}Flasky{% endblock %}
 {% block navbar %}
 <!-- jQuery (Bootstrap 插件需要引入) -->
 <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <!-- 包含了所有编译插件 -->
 <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="{{ url_for('static', filename='echarts.min.js') }}" ></script>
-
 <div class="navbar navbar-inverse" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle"
 			data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="/">SmartBeta55</a>
-		</div>
-<!-- 		<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
-				<li><a href="/"><span class="glyphicon glyphicon-shopping-cart"></span>Tdas</a></li>
-				<li><a href="#shop"><span class="glyphicon glyphicon-shopping-cart"></span> Test</a></li>
-			</ul>
-		</div> -->
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="/">SmartBeta55</a>
+	</div>
+	<div class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+			<li><a href="/"><span class="glyphicon glyphicon-shopping-cart"></span>Tdas</a></li>
+			<li><a href="#shop"><span class="glyphicon glyphicon-shopping-cart"></span> Test</a></li>
+		</ul>
 	</div>
 </div>
+</div>
 {% endblock %}
-<!-- 
+
 {% block head %}
 {{ super() }}
 <link rel="shortcut icon" href="{{ url_for('static', filename = 'company_logo.ico') }}"
 type="image/x-icon">
 <link rel="icon" href="{{ url_for('static', filename = 'company_logo.ico') }}"
 type="image/x-icon">
-{% endblock %} -->
+{% endblock %}
 
-<!-- 
+
 {% block content %}
 <div class="container">
 	{% for message in get_flashed_messages() %}
@@ -57,4 +56,4 @@ type="image/x-icon">
 {% endblock %}
 {% block scripts %}
    <h1> asdadsaasdsadsadasd</h1>
-{% endblock scripts %} -->
+{% endblock scripts %}

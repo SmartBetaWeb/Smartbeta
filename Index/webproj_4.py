@@ -8,7 +8,7 @@ from wtforms.validators import Required,EqualTo,AnyOf
 
 class NameForm(FlaskForm):
 	name = StringField('用户名', validators=[Required()])
-	pw = PasswordField('密码', validators = [AnyOf(['tian18'], message = '输入密码错误')])
+	# pw = PasswordField('密码', validators = [AnyOf(['tian18'], message = '输入密码错误')])
 	submit = SubmitField('登录')
 
 
@@ -29,15 +29,9 @@ def home_1():
 			print('flash')
 			flash('Looks like you have changed your name!')
 		session['name'] = form.name.data
-		# pw = form.pw
-		# pw = form.pw.data
-		# form.pw.data = 0
-		# print(form.name.data)
-		# print(form.pw)
 		form.name.data = ''
 		return redirect(url_for('home_1'))
 		# pw = form.pw.data
-	print('start')
-	return render_template('hello_web.html', form = form, name = session.get('name'))
+	return render_template('echart_test1.html', form = form, name = session.get('name'))
 if __name__ == '__main__':
 	app.run(host = '127.0.0.1', port = 5000)
