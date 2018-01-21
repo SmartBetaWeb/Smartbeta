@@ -20,7 +20,7 @@
 			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 				<li role="presentation" class="dropdown-header">基金选项</li>
 				<li role="presentation" >
-					<a role="menuitem" tabindex="-1" href="#">基金概况</a>
+					<a role="menuitem" tabindex="-1" href="#" onclick="change_test()">基金概况</a>
 				</li>
 				<li role="presentation">
 					<a role="menuitem" tabindex="-1" href="#">基金规模</a>
@@ -42,8 +42,19 @@
 	</div>
 	<br />
 	<div class = "row">
-		<!-- {% include 'includes/_tb1.html' %} -->
 		{{info|safe}}
 	</div>
 </div>
+
+
 {% endblock %}
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript">
+function change_test()
+{
+	x=document.getElementById("dropdownMenu1")  //查找元素
+	x.innerHTML='基金选项 <span class="caret"></span>';    //改变内容
+}
+</script>
+{% endblock%}

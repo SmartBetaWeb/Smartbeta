@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Flasky - Page Not Found{% endblock %}
+{% block page_content %}
+<h1 onclick="changecolor1()" id = "test1"> Change My Color</h1>
+{% endblock %}
+
+{% block scripts %}
+   {{super()}}
+   <script >
+   		function changecolor1()
+   	{
+   		x=document.getElementById("test1")  //找到元素
+   		x.style.color="#00ff00";  
+   	}
+
+   </script>
+{% endblock scripts %}

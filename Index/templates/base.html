@@ -2,10 +2,10 @@
 {% block title %}tgy{% endblock %}
 {% block navbar %}
 <!-- jQuery (Bootstrap 插件需要引入) -->
-<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script> -->
 <!-- 包含了所有编译插件 -->
-<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="{{ url_for('static', filename='echarts.min.js') }}" ></script>
+<!-- <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='echarts.min.js') }}" ></script> -->
 
 <div class="navbar navbar-inverse" role="navigation">
 	<div class="container">
@@ -37,7 +37,7 @@ type="image/x-icon">
 type="image/x-icon">
 {% endblock %} -->
 
-<!-- 
+
 {% block content %}
 <div class="container">
 	{% for message in get_flashed_messages() %}
@@ -56,5 +56,5 @@ type="image/x-icon">
 </div>
 {% endblock %}
 {% block scripts %}
-   <h1> asdadsaasdsadsadasd</h1>
-{% endblock scripts %} -->
+   {{super()}}
+{% endblock scripts %}
